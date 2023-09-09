@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Roblox Livestreams on Home Page
 // @namespace    https://www.roblox.com/
-// @version      1
+// @version      1.1
 // @description  Adds the most recent livestream on the Roblox Youtube channel to the home page as an embed.
 // @author       NomnomPlays
 // @match        https://www.roblox.com/home
