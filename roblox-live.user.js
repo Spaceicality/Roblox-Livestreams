@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Roblox Livestreams on Home Page
 // @namespace    https://www.roblox.com/
-// @version      1.0
+// @version      1
 // @description  Adds the most recent livestream on the Roblox Youtube channel to the home page as an embed.
-// @author       https://www.twitter.com/NomnomPlays
+// @author       NomnomPlays
 // @match        https://www.roblox.com/home
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=roblox.com
 // @grant        GM_xmlhttpRequest
@@ -11,6 +11,8 @@
 
 (function() {
     'use strict';
+
+    let top = false;
 
     const API_KEY = 'API KEY GOES HERE'; // API key for the script to work
 
@@ -33,7 +35,11 @@
                 const livestreamUrl = `https://www.youtube.com/watch?v=${livestreamId}`;
                 // Do something with the livestream URL, e.g., open it in a new tab
                 video.src = `https://www.youtube.com/embed/${livestreamId}?autoplay=1&mute=1`;
-                placelist.insertBefore(video, placelist.firstChild);
+                if (top) {
+                    placelist.insertBefore(video, placelist.firstChild);
+                } else {
+                    placelist.appendChild(video);
+                }
             }
         },
     });
