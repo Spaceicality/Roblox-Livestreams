@@ -3,7 +3,7 @@
 // @namespace    https://www.roblox.com/
 // @version      1.1
 // @description  Adds the most recent livestream on the Roblox Youtube channel to the home page as an embed.
-// @author       NomnomPlays
+// @author       Spaceicality
 // @match        https://www.roblox.com/home
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=roblox.com
 // @grant        GM_xmlhttpRequest
